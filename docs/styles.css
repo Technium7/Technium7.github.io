@@ -90,8 +90,8 @@ body {
   color: var(--muted);
 }
 
-.contact-line a {
-  color: #ffd166;
+.contact-line {
+  color: #ffffff;
 }
 
 .project-card {
