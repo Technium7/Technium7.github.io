@@ -1,0 +1,198 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%%
+% Original author
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+%% .tex file. The resume.cls file provides the resume style used for structuring thez
+%% document.
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%    PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\name{Zhenzhong (Jack) Xing} % Your name
+\address{Ithaca, New York 14850} % Your address
+%\address{} % Your secondary addess (optional)
+\address{(641)$\cdot$275$\cdot$6452 \\ zx296@cornell.edu} % Your phone number and email
+
+
+
+
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%    EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+\item {\bf Cornell University} 
+
+Ph.D. in Electrical and Computer Engineering \hfill {Expected summer of 2027}
+
+M.S. in Electrical and Computer Engineering\hfill {Dec 2025     \em GPA 4.067}
+
+        with concentrations in Applied Physics and Theory of Computation
+
+\item {\bf Grinnell College}
+
+B.A. in Physics (Honors) and Mathematics\hfill {May 2022     \em GPA 4.0}\\ 
+\end{rSection}
+
+%----------------------hm------------------------------------------------------------------
+%    WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Computer Experience}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Programming & Python, C, C++, Fortran\\
+Tools & Git, PyTorch, ROS2, JAX, OpenCV, Tidy3D, GDS factory\\
+Software \& technologies & Fusion360, Altium, MATLAB, Mathematica, Raspberry pi, Linux\\
+\end{tabular}
+
+\end{rSection}
+
+\begin{rSection}{Selected Courses and Skills}
+
+\textbf{Optoelectronics and Physics}: Nonlinear and quantum optics, Photonics, Electrodynamics, Semiconductor physics, Quantum mechanics, Atomic physics, Quantum information theory
+
+\textbf{Robotics, CS, and Engineering}: Embedded systems, Machine learning, Robot learning, Matrix computation, Analysis of algorithms, Optimization and control
+
+\textbf{Mathematics}: Probability theory, Dynamical systems, Linear algebra, Abstract algebra, Real and complex analysis, Statistical Distance
+
+Other: Basic machining
+
+
+\end{rSection}
+
+
+\begin{rSection}{Experience}
+
+\textbf{Cornell University}\\
+\begin{rSubsection}{Photonics and Quantum Electronics Group}{Jun 2022 - Present}{Graduate research assistant  \textsc{(founding lab member)}}{Ithaca, NY}
+
+\item \textbf{Designed and built a cryogenic, UHV apparatus, a electrical control systems, and a UV-IR optical system from the ground up} as the platform for trapping and controlling calcium ions for quantum information science. The system consists of \textbf{multi-stage vacuum chambers, DC and RF filtering and stabilizer circuits, and a combination of free-space optics, fibers, and integrated photonics} to address the ion with narrow-linewidth lasers of wavelength from 375 nm to 866 nm and end power of mW level.
+
+\vspace{0.1in}
+
+\item \textbf{Developed and deployed python packages to accelerate the full experiment cycle}, some are currently used in other research groups at ETH and Duke
+\begin{itemize}
+    \item[.] \textbf{Streamlined the design, simulation, and post-processing process of the ion trap chip with user friendly graphic interface}, by interacting with Klayout, GDS factory, Nullspace and Tidy3D.
+    \item[.] Automated the daily calibration with in situ data analysis of trapped ion system
+\end{itemize}
+
+\vspace{0.1in}
+
+\item \textbf{Demonstrated novel laser cooling schemes of trapped ion} to address the bottleneck in current industrial trapped ion quantum computing systems, using phase-stable standing-wave enabled by integrated photonics
+
+\vspace{0.1in}
+
+\item \textbf{Built a table-top 6-axis robotic arm to facilitate trap packaging and characterization process}. Characterized the beam emission profile from the designed ion trap chips with integrated photonics on 6-axis fiber to surface stages. 
+
+\vspace{0.1in}
+
+\item \textbf{Built a dynamic multi-voltage control solver with quadratic programming, achieving overall $\geq 10 \times$ speed up and smoother boundary solutions, by reformulating and preconditioning the ion transport problem}. Solver reduce the complexity even further from $\mathcal{O}(nm)$ to $\mathcal{O}(n)$ in the case of single ion.
+
+
+
+\end{rSubsection}
+
+\textbf{Fermilab}\\
+\begin{rSubsection}{Detector R\&D Gorup in Neutrino Division}{Summer 2021}{Research intern}{Batavia, IL}
+\item Optimized the performance of gaseous argon time projection chamber for neutrino detection using Cython with results published in internal reports
+\end{rSubsection}
+
+\textbf{Grinnell College}\\
+\begin{rSubsection}{Gravitational Physics Group}{Summer 2020}{Research assistant}{Grinnell, IA}
+\item Develop formalism for describing quantum particle constrained on 2D manifolds using differential geometry. Results published in \textit{Physics Scripta}.
+\end{rSubsection}
+
+
+
+
+%------------------------------------------------
+
+%\begin{rSubsection}{Florida State University}{Summer 2017 (10 weeks)}{Research assistant at the aero-propulsion, \\ mechatronics and energy (AME) research labs.}{Tallahassee, FL}
+%\item Developed a code that simulates the surface temperature of complex geometries based on real weather data in MATLAB and Fortran. 
+%Advised by Prof. Neda Yaghoobian.
+%\end{rSubsection}
+%------------------------------------------------
+
+
+
+
+
+
+
+
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%    TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+
+
+%\newpage
+
+\begin{rSection}{Publications}
+\item \textbf{Z. Xing}, H. M. Rivy, V. Natarajan1, A. K. Kolhatkar, G. Beck, and K. K. Mehta. ``Rapid multi-mode trapped-ion laser cooling in a phase-stable standing wave". \textit{Physical Review X} (in review).
+
+
+\item \textbf{Z. Xing}, K. K. Mehta.``Trapped-Ion Laser Cooling in Structured Light Fields." \textit{Physical Review Applied}, July 2025.
+
+\item S. Rodriguez, L. Rodriguez, \textbf{Z. Xing}, C. McMillin, L. R. Ram-Mohan.``Geometrodynamics of a 2D Curved Surface Due to a Constrained Quantum Particle via Its Gravitational Dual: S2 Analytical Model Calculations." \textit{Physica Scripta}, May 2025.
+
+%\item \textbf{Oscar Jaramillo}, Leonardo Massai and Karan Mehta. HfO$_2$-based Platform for High Index Contrast
+%Visible and UV Integrated Photonics. \textit{In 2023 Conference on Lasers and Electro-Optics (CLEO).}
+\end{rSection}
+
+
+
+
+
+
+
+
+\begin{rSection}{Selected Awards}
+Engineering School Fellowship (Cornell University).\\
+Andrew W. Archibald Prize for Highest Scholarship (Grinnell College).\\
+H. George Apostle Prize in Physics (Grinnell College).\\
+\end{rSection}
+
+
+\begin{rSection}{Languages}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+English & (Proficient) \\
+Mandarin & (Proficient)
+\end{tabular}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%    EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{rSection}{Section Name}
+
+%Section content\ldots
+
+%\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

@@ -147,9 +147,10 @@ body {
 
 .contact-card {
   display: grid;
-  gap: 1rem;
-  justify-items: center;
-  max-width: 420px;
+  grid-template-columns: minmax(220px, 340px) 1fr;
+  gap: 1.2rem;
+  align-items: center;
+  max-width: 760px;
   margin: 0 auto;
 }
 
@@ -159,6 +160,10 @@ body {
   object-fit: cover;
   border-radius: 12px;
   display: block;
+}
+
+.contact-content {
+  text-align: left;
 }
 
 .single-figure {
@@ -179,4 +184,25 @@ body {
   font-size: 0.9rem;
   color: var(--muted);
   margin-top: 0.45rem;
+}
+
+.cv-link {
+  color: #ffd166;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cv-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .contact-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .contact-content {
+    text-align: center;
+  }
 }
