@@ -18,7 +18,7 @@
       class="hero-image"
     >
     <div class="hero-overlay"></div>
-    <div class="hero-content">
+    <div class="hero-content" id="hero-content">
       <h1>Zhenzhong (Jack) Xing</h1>
       <p>building/automating systems for advanced compute</p>
       <a href="#about" class="scroll-link">Scroll to learn more</a>
@@ -28,19 +28,21 @@
   <main>
     <section id="about" class="section">
       <article class="project-card about-card">
-        <h2 class="in-card-title">About me</h2>
-        <div class="about-inner">
-          <div class="about-text">
-            <p>
-              I am a Ph.D. researcher in Electrical and Computer Engineering at Cornell, working at
-              the intersection of precision hardware, automation software, and optimization for complex
-              experimental systems.
-            </p>
-            <p>
-              My work spans end-to-end system design: building cryogenic and ultra-high-vacuum
-              apparatus, developing optical and electrical control stacks, and writing software that
-              accelerates experiment design, calibration, and operation.
-            </p>
+        <div class="about-layout">
+          <div class="about-text-block">
+            <h2 class="in-card-title about-heading">About me</h2>
+            <div class="about-text">
+              <p>
+                I am a Ph.D. researcher in Electrical and Computer Engineering at Cornell, working at
+                the intersection of precision hardware, automation software, and optimization for complex
+                experimental systems.
+              </p>
+              <p>
+                My work spans end-to-end system design: building cryogenic and ultra-high-vacuum
+                apparatus, developing optical and electrical control stacks, and writing software that
+                accelerates experiment design, calibration, and operation.
+              </p>
+            </div>
           </div>
           <img src="me/me.jpeg" alt="Zhenzhong (Jack) Xing" class="about-photo">
         </div>
@@ -48,7 +50,7 @@
     </section>
 
     <section id="projects" class="section">
-      <h2>Selected Project</h2>
+      <h2>Selected Projects</h2>
       <div class="projects-stack">
         <article class="project-card">
           <h3>Rapid Multi-Mode Trapped-Ion Laser Cooling</h3>
@@ -108,17 +110,21 @@
             The system improves repeatability and positioning quality for alignment-heavy tasks and
             supports reliable, semi-automated operation in lab production workflows.
           </p>
-          <figure class="single-figure">
-            <img src="robot/robotwpackingstage.jpeg" alt="6-axis robot with packaging stage" class="project-photo">
-            <figcaption>6-axis robotic setup for packaging and characterization.</figcaption>
-          </figure>
+          <div class="plot-grid plot-grid--one">
+            <figure>
+              <img src="robot/robotwpackingstage.jpeg" alt="6-axis robot with packaging stage" class="project-photo">
+              <figcaption>6-axis robotic setup for packaging and characterization.</figcaption>
+            </figure>
+          </div>
         </article>
       </div>
     </section>
 
     <section id="contact" class="section">
       <article class="project-card contact-card">
-        <img src="cornell.jpeg" alt="Cornell campus" class="contact-photo">
+        <div class="contact-media">
+          <img src="cornell.jpeg" alt="Cornell campus" class="contact-photo">
+        </div>
         <div class="contact-content">
           <h2 class="in-card-title contact-title">Contact</h2>
           <p class="contact-line">zx296@cornell.edu</p>
@@ -127,5 +133,19 @@
       </article>
     </section>
   </main>
+
+  <script>
+    (function () {
+      var el = document.getElementById('hero-content');
+      if (!el) return;
+      var speed = 1.45;
+      function onScroll() {
+        var y = window.scrollY || window.pageYOffset;
+        el.style.transform = 'translate3d(0,' + (-y * speed) + 'px,0)';
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
 </body>
 </html>
