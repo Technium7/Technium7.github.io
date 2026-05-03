@@ -204,7 +204,7 @@ body {
 
 .contact-card {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 50% 50%;
   gap: 1.5rem;
   align-items: stretch;
   width: 100%;
@@ -221,10 +221,11 @@ body {
 }
 
 .contact-photo {
+  width: 100%;
   max-width: 100%;
-  width: auto;
   height: auto;
-  max-height: 320px;
+  max-height: 400px;
+  object-fit: contain;
   display: block;
   border-radius: 12px;
 }
