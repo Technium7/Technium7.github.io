@@ -80,17 +80,62 @@ body {
   padding: 4rem 1.25rem;
 }
 
-.section h2 {
+.section > h2 {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+
+.in-card-title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.projects-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-card .about-inner {
+  display: grid;
+  grid-template-columns: 1fr minmax(160px, 280px);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.about-text p:first-child {
+  margin-top: 0;
+}
+
+.about-photo {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  justify-self: end;
+}
+
+@media (max-width: 700px) {
+  .about-card .about-inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .about-photo {
+    justify-self: center;
+    max-width: min(280px, 100%);
+  }
 }
 
 .section p {
   color: var(--muted);
 }
 
-.contact-line {
+.section .contact-line {
   color: #ffffff;
 }
 
@@ -166,6 +211,10 @@ body {
   text-align: left;
 }
 
+.contact-title {
+  margin-bottom: 0.75rem;
+}
+
 .single-figure {
   margin: 1rem 0 0;
   text-align: center;
@@ -187,7 +236,7 @@ body {
 }
 
 .cv-link {
-  color: #ffd166;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
 }

@@ -27,99 +27,102 @@
 
   <main>
     <section id="about" class="section">
-      <h2>Background</h2>
-      <p>
-        I am a Ph.D. researcher in Electrical and Computer Engineering at Cornell, working at
-        the intersection of precision hardware, automation software, and optimization for complex
-        experimental systems.
-      </p>
-      <p>
-        My work spans end-to-end system design: building cryogenic and ultra-high-vacuum
-        apparatus, developing optical and electrical control stacks, and writing software that
-        accelerates experiment design, calibration, and operation.
-      </p>
+      <article class="project-card about-card">
+        <h2 class="in-card-title">About me</h2>
+        <div class="about-inner">
+          <div class="about-text">
+            <p>
+              I am a Ph.D. researcher in Electrical and Computer Engineering at Cornell, working at
+              the intersection of precision hardware, automation software, and optimization for complex
+              experimental systems.
+            </p>
+            <p>
+              My work spans end-to-end system design: building cryogenic and ultra-high-vacuum
+              apparatus, developing optical and electrical control stacks, and writing software that
+              accelerates experiment design, calibration, and operation.
+            </p>
+          </div>
+          <img src="me/me.jpeg" alt="Zhenzhong (Jack) Xing" class="about-photo">
+        </div>
+      </article>
     </section>
 
     <section id="projects" class="section">
-      <h2>Selected Project: Laser Cooling</h2>
-      <article class="project-card">
-        <h3>Rapid Multi-Mode Trapped-Ion Laser Cooling</h3>
-        <p>
-          Demonstrated phase-stable standing-wave laser cooling enabled by integrated photonics to
-          improve motion control in trapped-ion systems. This project addresses a core scaling
-          challenge in hardware performance and control reliability.
-        </p>
-        <p>
-          Built automation for daily calibration and in-situ analysis to increase test throughput,
-          reduce operator overhead, and improve repeatability across long experiment cycles.
-        </p>
+      <h2>Selected Project</h2>
+      <div class="projects-stack">
+        <article class="project-card">
+          <h3>Rapid Multi-Mode Trapped-Ion Laser Cooling</h3>
+          <p>
+            Demonstrated phase-stable standing-wave laser cooling enabled by integrated photonics to
+            improve motion control in trapped-ion systems. This project addresses a core scaling
+            challenge in hardware performance and control reliability.
+          </p>
+          <p>
+            Built automation for daily calibration and in-situ analysis to increase test throughput,
+            reduce operator overhead, and improve repeatability across long experiment cycles.
+          </p>
 
-        <div class="plot-grid">
-          <figure>
-            <img src="laser_cooling/eit_cooling_plot.png" alt="EIT cooling plot">
-            <figcaption>EIT cooling result from trapped-ion experiment.</figcaption>
-          </figure>
-          <figure>
-            <img src="laser_cooling/beamrender_plot.jpg" alt="Beam profile rendering plot">
-            <figcaption>Beam rendering and profile characterization for photonic structures.</figcaption>
-          </figure>
-        </div>
-      </article>
-    </section>
+          <div class="plot-grid">
+            <figure>
+              <img src="laser_cooling/eit_cooling_plot.png" alt="EIT cooling plot">
+              <figcaption>EIT cooling result from trapped-ion experiment.</figcaption>
+            </figure>
+            <figure>
+              <img src="laser_cooling/beamrender_plot.jpg" alt="Beam profile rendering plot">
+              <figcaption>Beam rendering and profile characterization for photonic structures.</figcaption>
+            </figure>
+          </div>
+        </article>
 
-    <section id="apparatus" class="section">
-      <h2>Project: Cryogenic UHV Apparatus</h2>
-      <article class="project-card">
-        <h3>System Integration: Cryogenic, Optical, and Control Stack</h3>
-        <p>
-          Designed and built a cryogenic ultra-high-vacuum platform from the ground up, including
-          multi-stage vacuum hardware, RF/DC filtering and stabilization, and UV-to-IR optical
-          delivery for precision control.
-        </p>
-        <p>
-          This is a full-stack hardware/software integration project with direct relevance to
-          robotics and controls: mechatronic system bring-up, sensing and calibration workflows,
-          electrical/optical subsystem coordination, and robust operation under tight constraints.
-        </p>
-        <div class="plot-grid">
-          <figure>
-            <img src="apparatus/cryo_chamber.jpeg" alt="Cryogenic chamber assembly" class="project-photo">
-            <figcaption>Cryogenic chamber and vacuum hardware integration.</figcaption>
-          </figure>
-          <figure>
-            <img src="apparatus/lasers.jpeg" alt="Laser and optical control setup" class="project-photo">
-            <figcaption>Laser delivery and optical control setup.</figcaption>
-          </figure>
-        </div>
-      </article>
-    </section>
+        <article class="project-card">
+          <h3>System Integration: Cryogenic, Optical, and Control Stack</h3>
+          <p>
+            Designed and built a cryogenic ultra-high-vacuum platform from the ground up, including
+            multi-stage vacuum hardware, RF/DC filtering and stabilization, and UV-to-IR optical
+            delivery for precision control.
+          </p>
+          <p>
+            This is a full-stack hardware/software integration project with direct relevance to
+            robotics and controls: mechatronic system bring-up, sensing and calibration workflows,
+            electrical/optical subsystem coordination, and robust operation under tight constraints.
+          </p>
+          <div class="plot-grid">
+            <figure>
+              <img src="apparatus/cryo_chamber.jpeg" alt="Cryogenic chamber assembly" class="project-photo">
+              <figcaption>Cryogenic chamber and vacuum hardware integration.</figcaption>
+            </figure>
+            <figure>
+              <img src="apparatus/lasers.jpeg" alt="Laser and optical control setup" class="project-photo">
+              <figcaption>Laser delivery and optical control setup.</figcaption>
+            </figure>
+          </div>
+        </article>
 
-    <section id="robot" class="section">
-      <h2>Project: 6-Axis Robotic Packaging and Characterization</h2>
-      <article class="project-card">
-        <h3>Automation for Packaging and Alignment</h3>
-        <p>
-          Built a table-top 6-axis robotic workflow for trap packaging and characterization on
-          integrated photonics devices.
-        </p>
-        <p>
-          The system improves repeatability and positioning quality for alignment-heavy tasks and
-          supports reliable, semi-automated operation in lab production workflows.
-        </p>
-        <figure class="single-figure">
-          <img src="robot/robotwpackingstage.jpeg" alt="6-axis robot with packaging stage" class="project-photo">
-          <figcaption>6-axis robotic setup for packaging and characterization.</figcaption>
-        </figure>
-      </article>
+        <article class="project-card">
+          <h3>Automation for Packaging and Alignment</h3>
+          <p>
+            Built a table-top 6-axis robotic workflow for trap packaging and characterization on
+            integrated photonics devices.
+          </p>
+          <p>
+            The system improves repeatability and positioning quality for alignment-heavy tasks and
+            supports reliable, semi-automated operation in lab production workflows.
+          </p>
+          <figure class="single-figure">
+            <img src="robot/robotwpackingstage.jpeg" alt="6-axis robot with packaging stage" class="project-photo">
+            <figcaption>6-axis robotic setup for packaging and characterization.</figcaption>
+          </figure>
+        </article>
+      </div>
     </section>
 
     <section id="contact" class="section">
-      <h2>Contact</h2>
       <article class="project-card contact-card">
         <img src="cornell.jpeg" alt="Cornell campus" class="contact-photo">
         <div class="contact-content">
+          <h2 class="in-card-title contact-title">Contact</h2>
           <p class="contact-line">zx296@cornell.edu</p>
-          <p><a href="cv.tex" class="cv-link">View CV</a></p>
+          <p><a href="cv.pdf" class="cv-link">View CV</a></p>
         </div>
       </article>
     </section>
