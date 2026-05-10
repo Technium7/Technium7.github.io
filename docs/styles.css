@@ -179,7 +179,7 @@ body {
 }
 
 .plot-grid--robot .video-embed {
-  max-width: none;
+  max-width: 200px;
   width: 100%;
 }
 
