@@ -179,7 +179,7 @@ body {
 }
 
 .plot-grid--robot-split .video-embed {
-  max-width: 200px;
+  max-width: 240px;
   width: 100%;
 }
 
@@ -228,7 +228,7 @@ body {
 .video-embed {
   position: relative;
   width: 100%;
-  max-width: 320px;
+  max-width: 240px;
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
