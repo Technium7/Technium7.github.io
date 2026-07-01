@@ -171,8 +171,8 @@ body {
 }
 
 .plot-grid--robot-split {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: min(960px, 100%);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: min(640px, 100%);
   margin-left: auto;
   margin-right: auto;
   align-items: start;
