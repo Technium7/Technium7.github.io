@@ -27,7 +27,7 @@
 \name{Zhenzhong (Jack) Xing} % Your name
 \address{Ithaca, New York 14850} % Your address
 %\address{} % Your secondary addess (optional)
-\address{(641)$\cdot$275$\cdot$6452 \\ zx296@cornell.edu} % Your phone number and email
+\address{(641)$\cdot$275$\cdot$6452 \\ zx296@cornell.edu \\ https://technium7.github.io/} % Your phone number and email
 
 
 
@@ -56,24 +56,23 @@ B.A. in Physics (Honors) and Mathematics\hfill {May 2022     \em GPA 4.0}\\
 %----------------------hm------------------------------------------------------------------
 %    WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
-\begin{rSection}{Computer Experience}
+\begin{rSection}{Experience and Skills}
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Programming & Python, C, C++, Fortran\\
-Tools & Git, PyTorch, ROS2, JAX, OpenCV, Tidy3D, GDS factory\\
-Software \& technologies & Fusion360, Altium, MATLAB, Mathematica, Raspberry pi, Linux\\
+Programming & Python, C, C++, Fortran, Shell\\
+Tools & Git, PyTorch, JAX, OpenCV, Numpy, Scipy, Tidy3D, GDS factory\\
+Software & Fusion360, Altium, MATLAB, Mathematica, Linux\\
+Hardware & Precision optics, Analog/digital electronics, Micro-controller, Raspberry pi, Machining
 \end{tabular}
 
 \end{rSection}
 
-\begin{rSection}{Selected Courses and Skills}
+\begin{rSection}{Selected Courses}
 
 \textbf{Optoelectronics and Physics}: Nonlinear and quantum optics, Photonics, Electrodynamics, Semiconductor physics, Quantum mechanics, Atomic physics, Quantum information theory
 
-\textbf{Robotics, CS, and Engineering}: Embedded systems, Machine learning, Robot learning, Matrix computation, Analysis of algorithms, Optimization and control
+\textbf{Electrical engineering and CS}: Digital systems, Embedded systems, Machine learning, Robot learning and perception, Matrix computation, Analysis of algorithms, Optimization and control
 
-\textbf{Mathematics}: Probability theory, Dynamical systems, Linear algebra, Abstract algebra, Real and complex analysis, Statistical Distance
-
-Other: Basic machining
+\textbf{Mathematics}: Linear and abstract algebra, Real and complex analysis, Probability and statistics
 
 
 \end{rSection}
@@ -84,28 +83,39 @@ Other: Basic machining
 \textbf{Cornell University}\\
 \begin{rSubsection}{Photonics and Quantum Electronics Group}{Jun 2022 - Present}{Graduate research assistant  \textsc{(founding lab member)}}{Ithaca, NY}
 
-\item \textbf{Designed and built a cryogenic, UHV apparatus, a electrical control systems, and a UV-IR optical system from the ground up} as the platform for trapping and controlling calcium ions for quantum information science. The system consists of \textbf{multi-stage vacuum chambers, DC and RF filtering and stabilizer circuits, and a combination of free-space optics, fibers, and integrated photonics} to address the ion with narrow-linewidth lasers of wavelength from 375 nm to 866 nm and end power of mW level.
+\item \textbf{Designed and built a cryogenic, UHV apparatus, a electrical control systems, and a UV-IR precision optical system from the ground up} as the platform for trapping and controlling calcium ions for quantum information science. The system consists of \textbf{multi-stage vacuum chambers, DC and RF filtering and stabilization circuit boards, and a combination of free-space optics, fibers, and integrated photonics} to address the ion with narrow-linewidth lasers of wavelength from 375 nm to 866 nm and end power of mW level, with the electrical and optical control system developed based on FPGA, DDS, and DAC.
 
 \vspace{0.1in}
 
-\item \textbf{Developed and deployed python packages to accelerate the full experiment cycle}, some are currently used in other research groups at ETH and Duke
+\item \textbf{Developed and deployed python packages to accelerate the full experiment cycle}, some are currently used in other research groups at ETH and Duke.
 \begin{itemize}
-    \item[.] \textbf{Streamlined the design, simulation, and post-processing process of the ion trap chip with user friendly graphic interface}, by interacting with Klayout, GDS factory, Nullspace and Tidy3D.
-    \item[.] Automated the daily calibration with in situ data analysis of trapped ion system
+    \item[.] Streamlined the design, simulation, and post-processing process of the ion trap chip with user friendly graphic interface, by interacting with Klayout, GDS factory, Nullspace and Tidy3D.
+    \item[.] Automated the calibration and long data taking with in situ data analysis of the trapped ion system.
 \end{itemize}
 
 \vspace{0.1in}
 
-\item \textbf{Demonstrated novel laser cooling schemes of trapped ion} to address the bottleneck in current industrial trapped ion quantum computing systems, using phase-stable standing-wave enabled by integrated photonics
+\item \textbf{Built and trained a table-top 6-axis robotic arm to facilitate trap packaging and optical path alignment}. Based on an open source project, further developed hardware, MCU firmware, and software for robot perception, control, and motion.
+\begin{itemize}
+    \item[.] Implemented a Python robot control stack through ASCII serial protocol and keyboard teleop with PyBullet IK and simulation to hardware joint mapping for demo collection and debugging.
+    \item[.] Developed multi-camera vision pipelines that interact with Realsense, Thorlab, Infinity cameras and utilize calibration with environmental features to achieve sub-cm precision.
+    \item[.] Trained policies based on visual detection + collision-aware planning and vision encoder + diffusion for subtasks such as grabbing/inserting optical sensor and epoxy application, with global planning and interface through local llama model.
+\end{itemize}
 
 \vspace{0.1in}
 
-\item \textbf{Built a table-top 6-axis robotic arm to facilitate trap packaging and characterization process}. Characterized the beam emission profile from the designed ion trap chips with integrated photonics on 6-axis fiber to surface stages. 
+\item \textbf{Demonstrated novel laser cooling schemes of trapped ion} that could reduces the total cooling time by $>10\times$ and address the bottleneck in current industrial trapped ion quantum computing systems. Results lead to two first author papers.
+
+\item \textbf{Demonstrated trapped ion transportation on chips with multi-layer integrated photonics for the first time}. Preparing manuscript for publications.
+
+\begin{itemize}
+    \item[.] Built a dynamic multi-voltage control solver with quadratic programming. Reduced the complexity from $\mathcal{O}(nm)$ to $\mathcal{O}(n)$ for ion transport and achieved smoother boundary solutions by reformulating and preconditioning the ion transport problem
+    \item[.] Applied CEM to optimize transport path that reduce the final simulated phonon number by $\sim 10 \times$.
+    
+\end{itemize}
+
 
 \vspace{0.1in}
-
-\item \textbf{Built a dynamic multi-voltage control solver with quadratic programming, achieving overall $\geq 10 \times$ speed up and smoother boundary solutions, by reformulating and preconditioning the ion transport problem}. Solver reduce the complexity even further from $\mathcal{O}(nm)$ to $\mathcal{O}(n)$ in the case of single ion.
-
 
 
 \end{rSubsection}
@@ -117,7 +127,7 @@ Other: Basic machining
 
 \textbf{Grinnell College}\\
 \begin{rSubsection}{Gravitational Physics Group}{Summer 2020}{Research assistant}{Grinnell, IA}
-\item Develop formalism for describing quantum particle constrained on 2D manifolds using differential geometry. Results published in \textit{Physics Scripta}.
+\item Developed formalism for describing quantum particle constrained on 2D manifolds using differential geometry. Results published in \textit{Physics Scripta}.
 \end{rSubsection}
 
 
@@ -135,10 +145,6 @@ Other: Basic machining
 
 
 
-
-
-
-
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -150,8 +156,9 @@ Other: Basic machining
 %\newpage
 
 \begin{rSection}{Publications}
-\item \textbf{Z. Xing}, H. M. Rivy, V. Natarajan1, A. K. Kolhatkar, G. Beck, and K. K. Mehta. ``Rapid multi-mode trapped-ion laser cooling in a phase-stable standing wave". \textit{Physical Review X} (in review).
+\item \textbf{Z. Xing}, H. M. Rivy, V. Natarajan1, A. K. Kolhatkar, G. Beck, and K. K. Mehta. ``Rapid multi-mode trapped-ion laser cooling in a phase-stable standing wave." \textit{Physical Review X} (in review).
 
+\item A. M. Kolhatkar, V. Natarajan, H. M. Rivy, \textbf{Z. Xing}, G. Beck, K. K. Mehta. ``Enhanced trapped-ion quantum control in foundry-fabricated integrated devices." \textit{Quantum Information Science, Sensing, and Computation XVIII}, Jul 2026.
 
 \item \textbf{Z. Xing}, K. K. Mehta.``Trapped-Ion Laser Cooling in Structured Light Fields." \textit{Physical Review Applied}, July 2025.
 
