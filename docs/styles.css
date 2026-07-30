@@ -170,22 +170,36 @@ body {
   margin-right: auto;
 }
 
-.plot-grid--robot-split {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.plot-grid.plot-grid--robot-split {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
   max-width: min(960px, 100%);
   margin-left: auto;
   margin-right: auto;
-  align-items: start;
 }
 
-.plot-grid--robot-split .video-embed {
-  max-width: 240px;
+.plot-grid.plot-grid--robot-split > figure {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 280px;
+}
+
+.plot-grid.plot-grid--robot-split .video-embed {
+  max-width: 220px;
   width: 100%;
 }
 
 @media (max-width: 680px) {
-  .plot-grid--robot-split {
-    grid-template-columns: 1fr;
+  .plot-grid.plot-grid--robot-split {
+    flex-wrap: wrap;
+  }
+
+  .plot-grid.plot-grid--robot-split > figure {
+    flex: 1 1 100%;
+    max-width: none;
   }
 }
 
