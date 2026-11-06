@@ -94,6 +94,17 @@ body {
   font-weight: 600;
 }
 
+.project-group + .project-group {
+  margin-top: 2.75rem;
+}
+
+.project-group-title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+  font-weight: 600;
+  color: var(--accent);
+}
+
 .projects-stack {
   display: flex;
   flex-direction: column;
@@ -151,8 +162,11 @@ body {
   padding: 1.2rem;
 }
 
-.project-card h3 {
+.project-card h3,
+.project-card h4 {
   margin-top: 0.25rem;
+  font-size: 1.17em;
+  font-weight: 600;
 }
 
 .plot-grid {
