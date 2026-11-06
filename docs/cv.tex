@@ -1,33 +1,101 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV
-% LaTeX Template
-% Version 2.0 (8/5/13)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%%
-% Original author
-% Trey Hunner (http://www.treyhunner.com/)
-%
-% Important note:
-% This template requires the resume.cls file to be in the same directory as the
-%% .tex file. The resume.cls file provides the resume style used for structuring thez
-%% document.
+% Zhenzhong (Jack) Xing -- curriculum vitae
+% Standalone template: all formatting is defined in this file.
 
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
 
-%----------------------------------------------------------------------------------------
-%    PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\usepackage[parfill]{parskip}
+\usepackage{array}
+\usepackage[
+  top=0.6in,
+  bottom=0.6in,
+  left=0.75in,
+  right=0.75in
+]{geometry}
+\usepackage[hidelinks]{hyperref}
 
+\pagestyle{empty}
 
-\documentclass{resume} % Use the custom resume.cls style
+\makeatletter
+\newcommand{\cv@name}{}
+\newcommand{\cv@addresses}{}
+\newcommand{\addressSep}{$|$}
+\newcommand{\name}[1]{\gdef\cv@name{#1}}
+\newcommand{\address}[1]{%
+  \g@addto@macro\cv@addresses{%
+    \begingroup
+      \def\\{\addressSep\ }%
+      \centerline{#1}%
+    \endgroup
+    \par\vspace{0.1em}
+  }%
+}
+\AtBeginDocument{%
+  \begingroup
+    \hfil{\MakeUppercase{\Large\bfseries\cv@name}}\hfil
+    \medskip\break
+  \endgroup
+  \cv@addresses
+}
+\makeatother
+
+\newenvironment{rSection}[1]{%
+  \smallskip
+  \MakeUppercase{\textbf{#1}}
+  \smallskip
+  \hrule
+  \begin{list}{}{%
+    \setlength{\leftmargin}{0em}
+    \setlength{\topsep}{0.25em}
+    \setlength{\partopsep}{0pt}
+    \setlength{\parsep}{0pt}
+    \setlength{\itemsep}{0.15em}
+  }
+  \item[]
+}{%
+  \end{list}
+}
 
 \name{Zhenzhong (Jack) Xing} % Your name
-\address{Ithaca, New York 14850} % Your address
-%\address{} % Your secondary addess (optional)
+\address{Ithaca, New York 14853} % Your address
 \address{(641)$\cdot$275$\cdot$6452 \\ zx296@cornell.edu \\ https://technium7.github.io/} % Your phone number and email
+
+% Experience-entry commands.
+\newcommand{\institution}[1]{%
+  {\fontsize{11}{13}\selectfont\textbf{#1}}\par\vspace{-0.1em}%
+}
+\newcommand{\role}[2]{%
+  \textit{#1}\hfill #2\par\vspace{-0.3em}%
+}
+\newcommand{\category}[1]{%
+  \vspace{0.2em}\textbf{#1}\par\vspace{-0.2em}%
+}
+\newenvironment{experienceItems}{%
+  \begin{list}{\makebox[0pt][c]{$\cdot$}}{%
+    \leftmargin=1.5em
+    \labelwidth=0pt
+    \labelsep=0.75em
+    \topsep=0.2em
+    \partopsep=0pt
+    \parsep=0pt
+    \itemsep=0.15em
+  }
+}{%
+  \end{list}
+  \vspace{0.2em}
+}
+\newenvironment{details}{%
+  \begin{list}{\makebox[0pt][c]{$\cdot$}}{%
+    \leftmargin=1.5em
+    \labelwidth=0pt
+    \labelsep=0.75em
+    \topsep=0.1em
+    \partopsep=0pt
+    \parsep=0pt
+    \itemsep=0pt
+  }
+}{%
+  \end{list}
+}
 
 
 
@@ -40,39 +108,30 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Education}
-\item {\bf Cornell University} 
-
-Ph.D. in Electrical and Computer Engineering \hfill {Expected summer of 2027}
-
-M.S. in Electrical and Computer Engineering\hfill {Dec 2025     \em GPA 4.067}
-
-        with concentrations in Applied Physics and Theory of Computation
-
-\item {\bf Grinnell College}
-
-B.A. in Physics (Honors) and Mathematics\hfill {May 2022     \em GPA 4.0}\\ 
+\textbf{Cornell University}\par
+Ph.D. in Electrical and Computer Engineering \hfill Expected Summer 2028\par
+M.S. in Electrical and Computer Engineering \hfill Dec 2025 \quad \textit{GPA 4.067/4.3}\par
+\hspace*{1.5em}Concentrations in Applied Physics and Theory of Computation\par\vspace{0.25em}
+\textbf{Grinnell College}\par
+B.A. in Physics (Honors) and Mathematics \hfill May 2022 \quad \textit{GPA 4.0/4.0}
 \end{rSection}
 
 %----------------------hm------------------------------------------------------------------
 %    WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
-\begin{rSection}{Experience and Skills}
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Programming & Python, C, C++, Fortran, Shell\\
-Tools & Git, PyTorch, JAX, OpenCV, Numpy, Scipy, Tidy3D, GDS factory\\
-Software & Fusion360, Altium, MATLAB, Mathematica, Linux\\
-Hardware & Precision optics, Analog/digital electronics, Micro-controller, Raspberry pi, Machining
-\end{tabular}
-
+\begin{rSection}{Skills}
+\textbf{Coding}: Cursor, Codex, Claude Code, Python, C, C++, Fortran\par
+\textbf{Tools}: PyTorch, JAX, OpenCV, NumPy, SciPy, Git, Hugging Face\par
+\textbf{Hardware}: PCB design using Altium and EAGLE; analog and digital electronics (MCUs, DACs, and FPGAs); photonics design and layout with Tidy3D and GDSFactory; precision-optics design, assembly, testing, and control; machining and mechanical-system design using Inventor and Fusion 360\par
 \end{rSection}
 
 \begin{rSection}{Selected Courses}
 
-\textbf{Optoelectronics and Physics}: Nonlinear and quantum optics, Photonics, Electrodynamics, Semiconductor physics, Quantum mechanics, Atomic physics, Quantum information theory
+\textbf{Robotics and ECE}: Robot Learning, Robot Control and Optimization, Embedded Systems, Microcontrollers, Random Signals and Processing
 
-\textbf{Electrical engineering and CS}: Digital systems, Embedded systems, Machine learning, Robot learning and perception, Matrix computation, Analysis of algorithms, Optimization and control
+\textbf{Optoelectronics and Physics}: Nonlinear and Quantum Optics, Photonics, Electrodynamics, Semiconductor Physics, Quantum Mechanics, Atomic Physics, Quantum Information Theory
 
-\textbf{Mathematics}: Linear and abstract algebra, Real and complex analysis, Probability and statistics
+\textbf{Mathematics and CS}: Linear and Abstract Algebra, Real and Complex Analysis, Statistical Distance, Matrix Computation, Machine Learning for Science
 
 
 \end{rSection}
@@ -80,67 +139,49 @@ Hardware & Precision optics, Analog/digital electronics, Micro-controller, Raspb
 
 \begin{rSection}{Experience}
 
-\textbf{Cornell University}\\
-\begin{rSubsection}{Photonics and Quantum Electronics Group}{Jun 2022 - Present}{Graduate research assistant  \textsc{(founding lab member)}}{Ithaca, NY}
+\institution{Cornell University}
+\role{Postbac research assistant, graduate research student}{Jun 2022 - Present}
 
-\item \textbf{Designed and built a cryogenic, UHV apparatus, a electrical control systems, and a UV-IR precision optical system from the ground up} as the platform for trapping and controlling calcium ions for quantum information science. The system consists of \textbf{multi-stage vacuum chambers, DC and RF filtering and stabilization circuit boards, and a combination of free-space optics, fibers, and integrated photonics} to address the ion with narrow-linewidth lasers of wavelength from 375 nm to 866 nm and end power of mW level, with the electrical and optical control system developed based on FPGA, DDS, and DAC.
+\category{Robotics research}
+\begin{experienceItems}
+\item \textbf{Designed and implemented compressed-memory retrieval for VLA steering}. Manuscript in preparation.
+\begin{details}
+  \item Compressed the frozen SmolVLA VLM's 960-dimensional output (1.3 KB) into 64-dimensional keys (128 bytes) using a model trained with a soft dynamic time-warping contrastive loss based on action similarity.
+  \item Initial tests showed significant gains on precision tasks: with a 300-episode memory (1.5 MB), direct rollout success increased from 33\% to 62\% across 100 held-out peg-insertion tasks.
+\end{details}
+\item \textbf{Built and deployed a tabletop robotic arm to automate heterogeneous precision operations in an optics laboratory}. Work submitted to ICRA 2027.
+\begin{details}
+  \item Developed and deployed robot perception, control, and motion software that enables operation in the existing lab environment with one additional top-view camera.
+  \item Developed a multi-camera perception-and-control system with $\sim\!0.95$ mm localization uncertainty and a task-specific accuracy of $\leq\!0.2$ mm, enabling reliable automation of sensor manipulation, power measurement, and photonic-chip packaging.
+\end{details}
+\end{experienceItems}
 
-\vspace{0.1in}
+\category{Quantum science research}
+\begin{experienceItems}
+\item \textbf{Co-optimized ion-trap junction electrodes and transport trajectories using a Bayesian neural network}. Manuscript in preparation.
+\begin{details}
+    \item Applied a BLIPS-style neural network and the cross-entropy method to optimize transport paths and junction designs that reduced the final phonon number by $\sim\!100\times$ for high-speed transport under noise.
+    \item Built a quadratic-programming solver for dynamic multi-voltage control, reducing ion-transport complexity from $\mathcal{O}(nm)$ to $\mathcal{O}(n)$. Used the resulting voltage solutions to demonstrate ion transport on chips with multilayer integrated photonics for the first time.
+\end{details}
+\item \textbf{Demonstrated novel laser-cooling schemes for trapped ions} that reduced total cooling time by $>\!10\times$, addressing a bottleneck in industrial trapped-ion quantum computing systems in which cooling dominates operating time. Results led to two first-author papers.
+\item \textbf{Designed and built a trapped-ion quantum computing system} as a founding student in the Photonics and Quantum Electronics lab.
+\begin{details}
+\item Built a system comprising multistage cryogenic vacuum chambers; DC and RF filtering and stabilization circuits; and free-space optics, fiber optics, and integrated photonics for addressing ions with narrow-linewidth UV--IR lasers. Developed FPGA-, DDS-, and DAC-based electrical and optical controls.
+\item Developed and deployed Python packages to accelerate ion-trap chip design and automate system calibration, data collection, and in situ analysis. Several are now used by research groups at ETH and Duke.
+\end{details}
+\end{experienceItems}
 
-\item \textbf{Developed and deployed python packages to accelerate the full experiment cycle}, some are currently used in other research groups at ETH and Duke.
-\begin{itemize}
-    \item[.] Streamlined the design, simulation, and post-processing process of the ion trap chip with user friendly graphic interface, by interacting with Klayout, GDS factory, Nullspace and Tidy3D.
-    \item[.] Automated the calibration and long data taking with in situ data analysis of the trapped ion system.
-\end{itemize}
+\institution{Fermilab}
+\role{Research intern}{Summer 2021}
+\begin{experienceItems}
+\item Optimized the performance of a gaseous-argon time projection chamber for neutrino detection using Cython; results were published in internal reports.
+\end{experienceItems}
 
-\vspace{0.1in}
-
-\item \textbf{Built and trained a table-top 6-axis robotic arm to facilitate trap packaging and optical path alignment}. Based on an open source project, further developed hardware, MCU firmware, and software for robot perception, control, and motion.
-\begin{itemize}
-    \item[.] Implemented a Python robot control stack through ASCII serial protocol and keyboard teleop with PyBullet IK and simulation to hardware joint mapping for demo collection and debugging.
-    \item[.] Developed multi-camera vision pipelines that interact with Realsense, Thorlab, Infinity cameras and utilize calibration with environmental features to achieve sub-cm precision.
-    \item[.] Trained policies based on visual detection + collision-aware planning and vision encoder + diffusion for subtasks such as grabbing/inserting optical sensor and epoxy application, with global planning and interface through local llama model.
-\end{itemize}
-
-\vspace{0.1in}
-
-\item \textbf{Demonstrated novel laser cooling schemes of trapped ion} that could reduces the total cooling time by $>10\times$ and address the bottleneck in current industrial trapped ion quantum computing systems. Results lead to two first author papers.
-
-\item \textbf{Demonstrated trapped ion transportation on chips with multi-layer integrated photonics for the first time}. Preparing manuscript for publications.
-
-\begin{itemize}
-    \item[.] Built a dynamic multi-voltage control solver with quadratic programming. Reduced the complexity from $\mathcal{O}(nm)$ to $\mathcal{O}(n)$ for ion transport and achieved smoother boundary solutions by reformulating and preconditioning the ion transport problem
-    \item[.] Applied CEM to optimize transport path that reduce the final simulated phonon number by $\sim 10 \times$.
-    
-\end{itemize}
-
-
-\vspace{0.1in}
-
-
-\end{rSubsection}
-
-\textbf{Fermilab}\\
-\begin{rSubsection}{Detector R\&D Gorup in Neutrino Division}{Summer 2021}{Research intern}{Batavia, IL}
-\item Optimized the performance of gaseous argon time projection chamber for neutrino detection using Cython with results published in internal reports
-\end{rSubsection}
-
-\textbf{Grinnell College}\\
-\begin{rSubsection}{Gravitational Physics Group}{Summer 2020}{Research assistant}{Grinnell, IA}
-\item Developed formalism for describing quantum particle constrained on 2D manifolds using differential geometry. Results published in \textit{Physics Scripta}.
-\end{rSubsection}
-
-
-
-
-%------------------------------------------------
-
-%\begin{rSubsection}{Florida State University}{Summer 2017 (10 weeks)}{Research assistant at the aero-propulsion, \\ mechatronics and energy (AME) research labs.}{Tallahassee, FL}
-%\item Developed a code that simulates the surface temperature of complex geometries based on real weather data in MATLAB and Fortran. 
-%Advised by Prof. Neda Yaghoobian.
-%\end{rSubsection}
-%------------------------------------------------
-
+\institution{Grinnell College}
+\role{Research assistant}{Summer 2020}
+\begin{experienceItems}
+\item Developed a formalism for describing quantum particles constrained to 2D manifolds using differential geometry. Results were published in \textit{Physica Scripta}.
+\end{experienceItems}
 
 
 
@@ -156,13 +197,15 @@ Hardware & Precision optics, Analog/digital electronics, Micro-controller, Raspb
 %\newpage
 
 \begin{rSection}{Publications}
-\item \textbf{Z. Xing}, H. M. Rivy, V. Natarajan1, A. K. Kolhatkar, G. Beck, and K. K. Mehta. ``Rapid multi-mode trapped-ion laser cooling in a phase-stable standing wave." \textit{Physical Review X} (in review).
+\textbf{Z. Xing}, H. M. Rivy. ``Robotic Automation of Heterogeneous Precision Operations in an Optics Laboratory.'' \textit{ICRA} 2027 (submitted).
 
-\item A. M. Kolhatkar, V. Natarajan, H. M. Rivy, \textbf{Z. Xing}, G. Beck, K. K. Mehta. ``Enhanced trapped-ion quantum control in foundry-fabricated integrated devices." \textit{Quantum Information Science, Sensing, and Computation XVIII}, Jul 2026.
+\item \textbf{Z. Xing}, H. M. Rivy, V. Natarajan, A. K. Kolhatkar, G. Beck, and K. K. Mehta. ``Rapid multi-mode trapped-ion laser cooling in a phase-stable standing wave.'' \textit{PRX Quantum} (accepted).
 
-\item \textbf{Z. Xing}, K. K. Mehta.``Trapped-Ion Laser Cooling in Structured Light Fields." \textit{Physical Review Applied}, July 2025.
+\item A. M. Kolhatkar, V. Natarajan, H. M. Rivy, \textbf{Z. Xing}, G. Beck, K. K. Mehta. ``Enhanced trapped-ion quantum control in foundry-fabricated integrated devices.'' \textit{Quantum Information Science, Sensing, and Computation XVIII}, July 2026.
 
-\item S. Rodriguez, L. Rodriguez, \textbf{Z. Xing}, C. McMillin, L. R. Ram-Mohan.``Geometrodynamics of a 2D Curved Surface Due to a Constrained Quantum Particle via Its Gravitational Dual: S2 Analytical Model Calculations." \textit{Physica Scripta}, May 2025.
+\item \textbf{Z. Xing}, K. K. Mehta. ``Trapped-Ion Laser Cooling in Structured Light Fields.'' \textit{Physical Review Applied}, July 2025.
+
+\item S. Rodriguez, L. Rodriguez, \textbf{Z. Xing}, C. McMillin, L. R. Ram-Mohan. ``Geometrodynamics of a 2D Curved Surface Due to a Constrained Quantum Particle via Its Gravitational Dual: S2 Analytical Model Calculations.'' \textit{Physica Scripta}, May 2025.
 
 %\item \textbf{Oscar Jaramillo}, Leonardo Massai and Karan Mehta. HfO$_2$-based Platform for High Index Contrast
 %Visible and UV Integrated Photonics. \textit{In 2023 Conference on Lasers and Electro-Optics (CLEO).}
@@ -176,17 +219,17 @@ Hardware & Precision optics, Analog/digital electronics, Micro-controller, Raspb
 
 
 \begin{rSection}{Selected Awards}
-Engineering School Fellowship (Cornell University).\\
-Andrew W. Archibald Prize for Highest Scholarship (Grinnell College).\\
-H. George Apostle Prize in Physics (Grinnell College).\\
+Engineering School Fellowship (Cornell University)\\
+Andrew W. Archibald Prize for Highest Scholarship (Grinnell College)\\
+H. George Apostle Prize in Physics (Grinnell College)\\
 \end{rSection}
 
 
 \begin{rSection}{Languages}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-English & (Proficient) \\
-Mandarin & (Proficient)
+English & (Fluent) \\
+Mandarin & (Native)
 \end{tabular}
 \end{rSection}
 
